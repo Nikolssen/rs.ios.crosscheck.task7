@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UITextField (Customization)
 -(void) configureBorders;
 -(void) setBorderColor: (UIColor*) color;
+-(void) disable:(BOOL)shouldDisable;
 @end
 
 NS_ASSUME_NONNULL_END

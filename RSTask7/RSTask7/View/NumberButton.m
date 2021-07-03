@@ -23,11 +23,14 @@
     self.clipsToBounds = true;
 }
 
+
 -(void)setColor:(UIColor *)color{
     _color = color;
     self.layer.borderColor = color.CGColor;
     self.titleLabel.textColor = color;
 }
+
+
 
 
 @end

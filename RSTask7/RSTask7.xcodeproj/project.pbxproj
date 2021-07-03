@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84063C7D269079E900095425 /* UIColor+TaskColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C7C269079E900095425 /* UIColor+TaskColors.m */; };
+		84063C882690870700095425 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C862690870700095425 /* MainController.m */; };
+		84063C892690870700095425 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84063C872690870700095425 /* MainController.xib */; };
 		849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009D6268F9E1600D1F847 /* UITextField+Customization.m */; };
 		849009DB268FA06C00D1F847 /* NumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DA268FA06C00D1F847 /* NumberButton.m */; };
 		849009DF268FAC3300D1F847 /* MainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DE268FAC3300D1F847 /* MainPresenter.m */; };
@@ -14,11 +17,14 @@
 		84D78194268F9A160077E33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D78193268F9A160077E33E /* Assets.xcassets */; };
 		84D78197268F9A160077E33E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D78195268F9A160077E33E /* LaunchScreen.storyboard */; };
 		84D7819A268F9A160077E33E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D78199268F9A160077E33E /* main.m */; };
-		84D781A5268F9A6A0077E33E /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D781A3268F9A6A0077E33E /* MainController.m */; };
-		84D781A6268F9A6A0077E33E /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D781A4268F9A6A0077E33E /* MainController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84063C7B269079E900095425 /* UIColor+TaskColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+TaskColors.h"; sourceTree = "<group>"; };
+		84063C7C269079E900095425 /* UIColor+TaskColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TaskColors.m"; sourceTree = "<group>"; };
+		84063C852690870700095425 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		84063C862690870700095425 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		84063C872690870700095425 /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 		849009D5268F9E1600D1F847 /* UITextField+Customization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Customization.h"; sourceTree = "<group>"; };
 		849009D6268F9E1600D1F847 /* UITextField+Customization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Customization.m"; sourceTree = "<group>"; };
 		849009D9268FA06C00D1F847 /* NumberButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberButton.h; sourceTree = "<group>"; };
@@ -33,9 +39,6 @@
 		84D78196268F9A160077E33E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D78198268F9A160077E33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D78199268F9A160077E33E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84D781A2268F9A6A0077E33E /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		84D781A3268F9A6A0077E33E /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		84D781A4268F9A6A0077E33E /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84063C752690747200095425 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				849009DE268FAC3300D1F847 /* MainPresenter.m */,
+				849009DD268FAC3300D1F847 /* MainPresenter.h */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84063C762690748700095425 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				849009D5268F9E1600D1F847 /* UITextField+Customization.h */,
+				849009D6268F9E1600D1F847 /* UITextField+Customization.m */,
+				84063C7B269079E900095425 /* UIColor+TaskColors.h */,
+				84063C7C269079E900095425 /* UIColor+TaskColors.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84063C782690789800095425 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				849009E1268FAD9E00D1F847 /* MainView.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		84063C79269078B200095425 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				84D78187268F9A150077E33E /* AppDelegate.h */,
+				84D78188268F9A150077E33E /* AppDelegate.m */,
+				84D78193268F9A160077E33E /* Assets.xcassets */,
+				84D78198268F9A160077E33E /* Info.plist */,
+				84D78195268F9A160077E33E /* LaunchScreen.storyboard */,
+				84D78199268F9A160077E33E /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		84063C7F26907C9700095425 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				849009D9268FA06C00D1F847 /* NumberButton.h */,
+				849009DA268FA06C00D1F847 /* NumberButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84063C8026907CB100095425 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84063C852690870700095425 /* MainController.h */,
+				84063C862690870700095425 /* MainController.m */,
+				84063C872690870700095425 /* MainController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		84D7817B268F9A140077E33E = {
 			isa = PBXGroup;
 			children = (
@@ -68,22 +131,12 @@
 		84D78186268F9A150077E33E /* RSTask7 */ = {
 			isa = PBXGroup;
 			children = (
-				84D78187268F9A150077E33E /* AppDelegate.h */,
-				84D78188268F9A150077E33E /* AppDelegate.m */,
-				84D781A2268F9A6A0077E33E /* MainController.h */,
-				84D781A3268F9A6A0077E33E /* MainController.m */,
-				84D781A4268F9A6A0077E33E /* MainController.xib */,
-				849009D9268FA06C00D1F847 /* NumberButton.h */,
-				849009DA268FA06C00D1F847 /* NumberButton.m */,
-				849009DD268FAC3300D1F847 /* MainPresenter.h */,
-				849009E1268FAD9E00D1F847 /* MainView.h */,
-				849009DE268FAC3300D1F847 /* MainPresenter.m */,
-				849009D5268F9E1600D1F847 /* UITextField+Customization.h */,
-				849009D6268F9E1600D1F847 /* UITextField+Customization.m */,
-				84D78193268F9A160077E33E /* Assets.xcassets */,
-				84D78195268F9A160077E33E /* LaunchScreen.storyboard */,
-				84D78198268F9A160077E33E /* Info.plist */,
-				84D78199268F9A160077E33E /* main.m */,
+				84063C8026907CB100095425 /* Controller */,
+				84063C7F26907C9700095425 /* View */,
+				84063C762690748700095425 /* Category */,
+				84063C782690789800095425 /* Protocol */,
+				84063C752690747200095425 /* Presenter */,
+				84063C79269078B200095425 /* Other */,
 			);
 			path = RSTask7;
 			sourceTree = "<group>";
@@ -146,7 +199,7 @@
 			files = (
 				84D78197268F9A160077E33E /* LaunchScreen.storyboard in Resources */,
 				84D78194268F9A160077E33E /* Assets.xcassets in Resources */,
-				84D781A6268F9A6A0077E33E /* MainController.xib in Resources */,
+				84063C892690870700095425 /* MainController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +214,9 @@
 				849009DF268FAC3300D1F847 /* MainPresenter.m in Sources */,
 				849009DB268FA06C00D1F847 /* NumberButton.m in Sources */,
 				849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */,
-				84D781A5268F9A6A0077E33E /* MainController.m in Sources */,
 				84D7819A268F9A160077E33E /* main.m in Sources */,
+				84063C882690870700095425 /* MainController.m in Sources */,
+				84063C7D269079E900095425 /* UIColor+TaskColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +353,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6V47L895;
-				INFOPLIST_FILE = RSTask7/Info.plist;
+				INFOPLIST_FILE = RSTask7/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +372,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6V47L895;
-				INFOPLIST_FILE = RSTask7/Info.plist;
+				INFOPLIST_FILE = RSTask7/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

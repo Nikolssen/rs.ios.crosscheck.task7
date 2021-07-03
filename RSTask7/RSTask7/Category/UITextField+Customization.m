@@ -17,4 +17,16 @@
 -(void)setBorderColor: (UIColor*) color{
     self.layer.borderColor = color.CGColor;
 }
+
+
+-(void)disable:(BOOL)shouldDisable{
+    if (shouldDisable){
+        self.enabled = NO;
+        self.alpha = 0.5;
+    }
+    else {
+        self.enabled = YES;
+        self.alpha = 1.0;
+    }
+}
 @end
