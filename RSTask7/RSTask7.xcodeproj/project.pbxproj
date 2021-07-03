@@ -10,6 +10,8 @@
 		84063C7D269079E900095425 /* UIColor+TaskColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C7C269079E900095425 /* UIColor+TaskColors.m */; };
 		84063C882690870700095425 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C862690870700095425 /* MainController.m */; };
 		84063C892690870700095425 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84063C872690870700095425 /* MainController.xib */; };
+		84063C8D2690B21A00095425 /* AuthorizationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C8C2690B21A00095425 /* AuthorizationButton.m */; };
+		84063C922690CEBA00095425 /* NumberPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C912690CEBA00095425 /* NumberPanel.m */; };
 		849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009D6268F9E1600D1F847 /* UITextField+Customization.m */; };
 		849009DB268FA06C00D1F847 /* NumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DA268FA06C00D1F847 /* NumberButton.m */; };
 		849009DF268FAC3300D1F847 /* MainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DE268FAC3300D1F847 /* MainPresenter.m */; };
@@ -25,6 +27,10 @@
 		84063C852690870700095425 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		84063C862690870700095425 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		84063C872690870700095425 /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		84063C8B2690B21A00095425 /* AuthorizationButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorizationButton.h; sourceTree = "<group>"; };
+		84063C8C2690B21A00095425 /* AuthorizationButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorizationButton.m; sourceTree = "<group>"; };
+		84063C902690CEBA00095425 /* NumberPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberPanel.h; sourceTree = "<group>"; };
+		84063C912690CEBA00095425 /* NumberPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberPanel.m; sourceTree = "<group>"; };
 		849009D5268F9E1600D1F847 /* UITextField+Customization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Customization.h"; sourceTree = "<group>"; };
 		849009D6268F9E1600D1F847 /* UITextField+Customization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Customization.m"; sourceTree = "<group>"; };
 		849009D9268FA06C00D1F847 /* NumberButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberButton.h; sourceTree = "<group>"; };
@@ -55,8 +61,8 @@
 		84063C752690747200095425 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				849009DE268FAC3300D1F847 /* MainPresenter.m */,
 				849009DD268FAC3300D1F847 /* MainPresenter.h */,
+				849009DE268FAC3300D1F847 /* MainPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -98,6 +104,10 @@
 			children = (
 				849009D9268FA06C00D1F847 /* NumberButton.h */,
 				849009DA268FA06C00D1F847 /* NumberButton.m */,
+				84063C8B2690B21A00095425 /* AuthorizationButton.h */,
+				84063C8C2690B21A00095425 /* AuthorizationButton.m */,
+				84063C902690CEBA00095425 /* NumberPanel.h */,
+				84063C912690CEBA00095425 /* NumberPanel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +225,8 @@
 				849009DB268FA06C00D1F847 /* NumberButton.m in Sources */,
 				849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */,
 				84D7819A268F9A160077E33E /* main.m in Sources */,
+				84063C922690CEBA00095425 /* NumberPanel.m in Sources */,
+				84063C8D2690B21A00095425 /* AuthorizationButton.m in Sources */,
 				84063C882690870700095425 /* MainController.m in Sources */,
 				84063C7D269079E900095425 /* UIColor+TaskColors.m in Sources */,
 			);

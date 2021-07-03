@@ -8,7 +8,7 @@
 #import "UIColor+TaskColors.h"
 
 @implementation UIColor (TaskColors)
-+(instancetype) blackCoralColor{
++(instancetype) blackCoral{
     return [UIColor colorWithRed:76.0/255.0 green:92.0/255.0 blue:104.0/255.0 alpha:1.0];
 }
 +(instancetype) turquioseGreen{

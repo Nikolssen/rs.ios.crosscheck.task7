@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (TaskColors)
-+(instancetype) blackCoralColor;
++(instancetype) blackCoral;
 +(instancetype) turquioseGreen;
 +(instancetype) venetianRed;
 +(instancetype) littleBoyBlue;

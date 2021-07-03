@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) validateLogin:(BOOL) isValide;
 -(void) validatePassword: (BOOL) isValide;
 -(void) valideCode:(BOOL) isValide;
--(void) 
+-(void) nextCheck;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController">
             <connections>
+                <outlet property="indicatorView" destination="zds-72-BLu" id="tsp-Zf-zvg"/>
                 <outlet property="loginTextField" destination="t8p-ds-rLh" id="ltQ-v1-uAh"/>
                 <outlet property="passwordTextField" destination="lLV-XN-Mdq" id="X8Y-kY-4NK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,15 +38,37 @@
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zds-72-BLu">
+                    <rect key="frame" x="69.5" y="470" width="236" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="236" id="IYF-ra-5oR"/>
+                        <constraint firstAttribute="height" constant="110" id="lHA-No-BdQ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DV-NAi">
+                    <rect key="frame" x="109.5" y="361" width="156" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="156" id="Xjx-ey-Eea"/>
+                        <constraint firstAttribute="height" constant="42" id="jps-Aw-8k0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="authorize:" destination="-1" eventType="touchUpInside" id="L5D-Gc-ory"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="t8p-ds-rLh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="4Oh-q2-wHz"/>
                 <constraint firstItem="lLV-XN-Mdq" firstAttribute="top" secondItem="t8p-ds-rLh" secondAttribute="bottom" constant="30" id="E6R-jQ-GnN"/>
+                <constraint firstItem="ZC3-DV-NAi" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="FH9-c6-895"/>
                 <constraint firstItem="Gcd-eB-zEU" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Flz-pa-xFL"/>
                 <constraint firstItem="Gcd-eB-zEU" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="Wcd-K1-BXX"/>
                 <constraint firstItem="t8p-ds-rLh" firstAttribute="top" secondItem="Gcd-eB-zEU" secondAttribute="bottom" constant="80" id="Xld-lF-2gU"/>
+                <constraint firstItem="ZC3-DV-NAi" firstAttribute="top" secondItem="lLV-XN-Mdq" secondAttribute="bottom" constant="60" id="bqI-aG-zOp"/>
+                <constraint firstItem="zds-72-BLu" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="stv-L5-V8a"/>
+                <constraint firstItem="zds-72-BLu" firstAttribute="top" secondItem="ZC3-DV-NAi" secondAttribute="bottom" constant="67" id="tgi-1l-eL9"/>
                 <constraint firstItem="lLV-XN-Mdq" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="v3T-z1-MoK"/>
                 <constraint firstItem="t8p-ds-rLh" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="wlQ-A2-98a"/>
                 <constraint firstItem="lLV-XN-Mdq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="xzg-y9-d87"/>

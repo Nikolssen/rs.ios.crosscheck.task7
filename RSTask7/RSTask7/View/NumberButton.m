@@ -20,7 +20,7 @@
     CGRect frame = self.frame;
     self.frame = CGRectMake(frame.origin.x, frame.origin.y, radius*2, radius*2);
     _path = [UIBezierPath bezierPathWithOvalInRect:self.frame];
-    self.clipsToBounds = true;
+   
 }
 
 
@@ -29,6 +29,13 @@
     self.layer.borderColor = color.CGColor;
     self.titleLabel.textColor = color;
 }
+
+- (void) awakeFromNib{
+    [super awakeFromNib];
+    self.clipsToBounds = true;
+    
+}
+
 
 
 

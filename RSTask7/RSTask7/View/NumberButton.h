@@ -10,8 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NumberButton : UIButton
-@property (nonatomic, assign) CGFloat radius;
+IB_DESIGNABLE @property (nonatomic, assign) CGFloat radius;
 @property (nonatomic, strong) UIColor* color;
 @end
+
 
 NS_ASSUME_NONNULL_END
