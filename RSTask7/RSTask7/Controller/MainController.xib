@@ -11,8 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController">
             <connections>
-                <outlet property="indicatorView" destination="zds-72-BLu" id="tsp-Zf-zvg"/>
+                <outlet property="authorizationButton" destination="ZC3-DV-NAi" id="J57-QM-WvG"/>
                 <outlet property="loginTextField" destination="t8p-ds-rLh" id="ltQ-v1-uAh"/>
+                <outlet property="numberPanel" destination="zds-72-BLu" id="6go-I1-GBj"/>
                 <outlet property="passwordTextField" destination="lLV-XN-Mdq" id="X8Y-kY-4NK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,7 +39,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zds-72-BLu">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zds-72-BLu" customClass="NumberPanel">
                     <rect key="frame" x="69.5" y="470" width="236" height="110"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="236" id="IYF-ra-5oR"/>

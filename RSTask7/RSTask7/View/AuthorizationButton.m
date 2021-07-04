@@ -73,6 +73,17 @@
     }
     
 }
+
+- (void)setEnabled:(BOOL)enabled{
+    [super setEnabled:enabled];
+    if (!enabled){
+        self.alpha = 0.5;
+    }
+    else
+    {
+        self.alpha = 1.0;
+    }
+}
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
     return [self.path containsPoint:point];
 }
