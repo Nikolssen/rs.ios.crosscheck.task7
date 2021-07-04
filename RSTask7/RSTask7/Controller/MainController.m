@@ -6,7 +6,7 @@
 //
 
 #import "MainController.h"
-#import "UITextField+Customization.h"
+#import "TextField.h"
 #import "UIColor+TaskColors.h"
 #import "MainView.h"
 #import "NumberButton.h"
@@ -14,8 +14,8 @@
 #import "AuthorizationButton.h"
 
 @interface MainController () <UITextFieldDelegate, NumberPanelDelegate>
-@property (strong, nonatomic) IBOutlet UITextField *loginTextField;
-@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet TextField *loginTextField;
+@property (strong, nonatomic) IBOutlet TextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet NumberPanel *numberPanel;
 @property (strong, nonatomic) IBOutlet AuthorizationButton *authorizationButton;
 
@@ -34,10 +34,8 @@
 }
 
 - (void) confugureUI{
-    [self.loginTextField configureBorders];
-    [self.passwordTextField configureBorders];
-    [self.loginTextField setBorderColor:[UIColor blackCoral]];
-    [self.passwordTextField setBorderColor:[UIColor blackCoral]];
+    self.loginTextField.fieldState = TextFieldStateDefault;
+    self.passwordTextField.fieldState = TextFieldStateDefault;
     self.numberPanel.state = NumberPanelStateHidden;
 }
 
@@ -48,23 +46,14 @@
 -(void)hide{
     [self.view endEditing:true];
 }
-- (void)validateLogin:(BOOL)isValide {
-    if (isValide) {
-        [self.loginTextField setBorderColor:[UIColor turquioseGreen]];
-    }
-    else {
-        [self.loginTextField setBorderColor:[UIColor venetianRed]];
-    }
+- (void)invalidateLogin {
+    self.loginTextField.fieldState = TextFieldStateError;
 }
 
-- (void)validatePassword:(BOOL)isValide {
-    if (isValide) {
-        [self.passwordTextField setBorderColor:[UIColor turquioseGreen]];
+- (void)invalidatePassword{
+    self.passwordTextField.fieldState = TextFieldStateError;
     }
-    else {
-        [self.passwordTextField setBorderColor:[UIColor venetianRed]];
-    }
-}
+
 
 - (void)valideCode:(BOOL)isValide {
     if (isValide) {
@@ -78,8 +67,10 @@
 }
 
 - (void)nextCheck {
-    [self.passwordTextField disable:YES];
-    [self.loginTextField disable:YES];
+    self.loginTextField.fieldState = TextFieldStateCorrect;
+    self.passwordTextField.fieldState = TextFieldStateCorrect;
+    self.loginTextField.fieldState = TextFieldStateInactive;
+    self.passwordTextField.fieldState = TextFieldStateInactive;
     self.authorizationButton.enabled = NO;
     self.numberPanel.state = NumberPanelStateInactive;
 }
@@ -89,7 +80,10 @@
     return YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    
+    TextField* field = (TextField*)textField;
+    if (field.fieldState == TextFieldStateError){
+        field.fieldState = TextFieldStateDefault;
+    }
 }
 - (IBAction)authorize:(UIButton *)sender {
     NSString* login = self.loginTextField.text;
@@ -106,12 +100,10 @@
 
     __weak typeof(self) weakSelf = self;
     UIAlertAction* refreshAction = [UIAlertAction actionWithTitle:@"Refresh" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        [weakSelf.passwordTextField disable:NO];
-        [weakSelf.loginTextField disable:NO];
+        weakSelf.passwordTextField.fieldState = TextFieldStateDefault;
+        weakSelf.loginTextField.fieldState = TextFieldStateDefault;
         weakSelf.authorizationButton.enabled = YES;
         weakSelf.numberPanel.state = NumberPanelStateHidden;
-        [weakSelf.loginTextField setBorderColor:[UIColor blackCoral]];
-        [weakSelf.passwordTextField setBorderColor:[UIColor blackCoral]];
     }];
     [alertController addAction:refreshAction];
     

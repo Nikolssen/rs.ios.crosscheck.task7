@@ -13,8 +13,12 @@
 -(void)checkLogin:(NSString*) login AndPassword:(NSString*) password{
     BOOL correctPassword = [password isEqualToString:@"password"];
     BOOL correctLogin = [login isEqualToString:@"username"];
-    [self.view validateLogin:correctLogin];
-    [self.view validatePassword:correctPassword];
+    if (!correctPassword){
+        [self.view invalidatePassword];
+    }
+    if (!correctLogin){
+        [self.view invalidateLogin];
+    }
     if (correctLogin && correctPassword){
         [self.view nextCheck];
     }

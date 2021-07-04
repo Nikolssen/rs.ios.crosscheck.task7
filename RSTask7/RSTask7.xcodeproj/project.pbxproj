@@ -12,9 +12,9 @@
 		84063C892690870700095425 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84063C872690870700095425 /* MainController.xib */; };
 		84063C8D2690B21A00095425 /* AuthorizationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C8C2690B21A00095425 /* AuthorizationButton.m */; };
 		84063C922690CEBA00095425 /* NumberPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84063C912690CEBA00095425 /* NumberPanel.m */; };
-		849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009D6268F9E1600D1F847 /* UITextField+Customization.m */; };
 		849009DB268FA06C00D1F847 /* NumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DA268FA06C00D1F847 /* NumberButton.m */; };
 		849009DF268FAC3300D1F847 /* MainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 849009DE268FAC3300D1F847 /* MainPresenter.m */; };
+		84BBDF05269245C90029E655 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BBDF04269245C90029E655 /* TextField.m */; };
 		84D78189268F9A150077E33E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D78188268F9A150077E33E /* AppDelegate.m */; };
 		84D78194268F9A160077E33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D78193268F9A160077E33E /* Assets.xcassets */; };
 		84D78197268F9A160077E33E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D78195268F9A160077E33E /* LaunchScreen.storyboard */; };
@@ -31,14 +31,14 @@
 		84063C8C2690B21A00095425 /* AuthorizationButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorizationButton.m; sourceTree = "<group>"; };
 		84063C902690CEBA00095425 /* NumberPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberPanel.h; sourceTree = "<group>"; };
 		84063C912690CEBA00095425 /* NumberPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberPanel.m; sourceTree = "<group>"; };
-		849009D5268F9E1600D1F847 /* UITextField+Customization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Customization.h"; sourceTree = "<group>"; };
-		849009D6268F9E1600D1F847 /* UITextField+Customization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Customization.m"; sourceTree = "<group>"; };
 		849009D9268FA06C00D1F847 /* NumberButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberButton.h; sourceTree = "<group>"; };
 		849009DA268FA06C00D1F847 /* NumberButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberButton.m; sourceTree = "<group>"; };
 		849009DD268FAC3300D1F847 /* MainPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPresenter.h; sourceTree = "<group>"; };
 		849009DE268FAC3300D1F847 /* MainPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPresenter.m; sourceTree = "<group>"; };
 		849009E1268FAD9E00D1F847 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		84BBDEB42690ED7C0029E655 /* NumberPanelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberPanelDelegate.h; sourceTree = "<group>"; };
+		84BBDF03269245C90029E655 /* TextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		84BBDF04269245C90029E655 /* TextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
 		84D78184268F9A150077E33E /* RSTask7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D78187268F9A150077E33E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D78188268F9A150077E33E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,8 +71,6 @@
 		84063C762690748700095425 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				849009D5268F9E1600D1F847 /* UITextField+Customization.h */,
-				849009D6268F9E1600D1F847 /* UITextField+Customization.m */,
 				84063C7B269079E900095425 /* UIColor+TaskColors.h */,
 				84063C7C269079E900095425 /* UIColor+TaskColors.m */,
 			);
@@ -110,6 +108,8 @@
 				84063C8C2690B21A00095425 /* AuthorizationButton.m */,
 				84063C902690CEBA00095425 /* NumberPanel.h */,
 				84063C912690CEBA00095425 /* NumberPanel.m */,
+				84BBDF03269245C90029E655 /* TextField.h */,
+				84BBDF04269245C90029E655 /* TextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,10 +225,10 @@
 				84D78189268F9A150077E33E /* AppDelegate.m in Sources */,
 				849009DF268FAC3300D1F847 /* MainPresenter.m in Sources */,
 				849009DB268FA06C00D1F847 /* NumberButton.m in Sources */,
-				849009D7268F9E1600D1F847 /* UITextField+Customization.m in Sources */,
 				84D7819A268F9A160077E33E /* main.m in Sources */,
 				84063C922690CEBA00095425 /* NumberPanel.m in Sources */,
 				84063C8D2690B21A00095425 /* AuthorizationButton.m in Sources */,
+				84BBDF05269245C90029E655 /* TextField.m in Sources */,
 				84063C882690870700095425 /* MainController.m in Sources */,
 				84063C7D269079E900095425 /* UIColor+TaskColors.m in Sources */,
 			);

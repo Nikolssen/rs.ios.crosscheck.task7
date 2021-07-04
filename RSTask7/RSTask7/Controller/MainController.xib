@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController">
             <connections>
                 <outlet property="authorizationButton" destination="ZC3-DV-NAi" id="J57-QM-WvG"/>
-                <outlet property="loginTextField" destination="t8p-ds-rLh" id="ltQ-v1-uAh"/>
+                <outlet property="loginTextField" destination="t8p-ds-rLh" id="pLl-gP-iTw"/>
                 <outlet property="numberPanel" destination="zds-72-BLu" id="6go-I1-GBj"/>
-                <outlet property="passwordTextField" destination="lLV-XN-Mdq" id="X8Y-kY-4NK"/>
+                <outlet property="passwordTextField" destination="lLV-XN-Mdq" id="WB5-H3-ef0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,12 +29,12 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-ds-rLh">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-ds-rLh" customClass="TextField">
                     <rect key="frame" x="36" y="203" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLV-XN-Mdq">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLV-XN-Mdq" customClass="TextField">
                     <rect key="frame" x="36" y="267" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>

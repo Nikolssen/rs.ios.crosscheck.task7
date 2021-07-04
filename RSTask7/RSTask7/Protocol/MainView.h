@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol MainView <NSObject>
--(void) validateLogin:(BOOL) isValide;
--(void) validatePassword: (BOOL) isValide;
+-(void) invalidateLogin;
+-(void) invalidatePassword;
 -(void) valideCode:(BOOL) isValide;
 -(void) nextCheck;
 @end
