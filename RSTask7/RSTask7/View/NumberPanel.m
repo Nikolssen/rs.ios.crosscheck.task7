@@ -67,13 +67,14 @@
 
 - (void) setState:(NumberPanelState)state{
     if (state == NumberPanelStateHidden){
+        self.codeLabel.text = @"_";
+        self.string = [NSMutableString new];
         self.hidden = YES;
         return;
     }
     self.hidden = NO;
     if (state == NumberPanelStateInactive){
-        self.codeLabel.text = @"_";
-        self.string = [NSMutableString new];;
+ 
         self.layer.borderWidth = 0;
         return;
     }
@@ -84,11 +85,13 @@
     }
     if (state == NumberPanelStateError){
         self.layer.borderColor = [UIColor venetianRed].CGColor;
+        self.codeLabel.text = @"_";
+        self.string = [NSMutableString new];
     }
 }
 
 -(void)buttonPressed:(UIButton*) sender{
-    if (self.string.length == 4){
+    if (self.string.length == 3){
         if (self.delegate){
             [self.delegate proceedSequence:self.string];
         }
@@ -98,7 +101,7 @@
         if ([self.buttons objectAtIndex:i] == sender) {
             [self.string appendFormat:@"%lu",i+1];
             self.codeLabel.text = self.string;
-            if (self.string.length == 4) {
+            if (self.string.length == 3) {
                 if (self.delegate){
                     [self.delegate proceedSequence:self.string];
                 }

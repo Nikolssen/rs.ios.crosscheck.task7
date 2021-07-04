@@ -12,6 +12,7 @@
 #import "NumberButton.h"
 #import "NumberPanel.h"
 #import "AuthorizationButton.h"
+
 @interface MainController () <UITextFieldDelegate, NumberPanelDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *loginTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -29,10 +30,8 @@
     self.loginTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.numberPanel.delegate = self;
-
-
+    [self hideWhenTappedAround];
 }
-
 
 - (void) confugureUI{
     [self.loginTextField configureBorders];
@@ -40,7 +39,14 @@
     [self.loginTextField setBorderColor:[UIColor blackCoral]];
     [self.passwordTextField setBorderColor:[UIColor blackCoral]];
     self.numberPanel.state = NumberPanelStateHidden;
+}
 
+- (void) hideWhenTappedAround{
+    UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hide)];
+    [self.view addGestureRecognizer:gesture];
+}
+-(void)hide{
+    [self.view endEditing:true];
 }
 - (void)validateLogin:(BOOL)isValide {
     if (isValide) {
@@ -63,6 +69,7 @@
 - (void)valideCode:(BOOL)isValide {
     if (isValide) {
         self.numberPanel.state = NumberPanelStateCorrect;
+        [self showModal];
     }
     else
     {
@@ -90,10 +97,25 @@
     [self.presenter checkLogin:login AndPassword:password];
 }
 
-
 - (void)proceedSequence:(nonnull NSString *)sequence {
     [self.presenter checkCode:sequence];
 }
 
+- (void)showModal{
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Welcome" message:@"You are successfully authorized" preferredStyle:UIAlertControllerStyleAlert];
+
+    __weak typeof(self) weakSelf = self;
+    UIAlertAction* refreshAction = [UIAlertAction actionWithTitle:@"Refresh" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+        [weakSelf.passwordTextField disable:NO];
+        [weakSelf.loginTextField disable:NO];
+        weakSelf.authorizationButton.enabled = YES;
+        weakSelf.numberPanel.state = NumberPanelStateHidden;
+        [weakSelf.loginTextField setBorderColor:[UIColor blackCoral]];
+        [weakSelf.passwordTextField setBorderColor:[UIColor blackCoral]];
+    }];
+    [alertController addAction:refreshAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 @end

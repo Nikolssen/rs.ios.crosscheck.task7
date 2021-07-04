@@ -27,6 +27,7 @@
     else {
         self.enabled = YES;
         self.alpha = 1.0;
+        self.text = @"";
     }
 }
 @end
