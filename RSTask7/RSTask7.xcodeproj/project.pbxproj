@@ -38,6 +38,7 @@
 		849009DD268FAC3300D1F847 /* MainPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPresenter.h; sourceTree = "<group>"; };
 		849009DE268FAC3300D1F847 /* MainPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPresenter.m; sourceTree = "<group>"; };
 		849009E1268FAD9E00D1F847 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		84BBDEB42690ED7C0029E655 /* NumberPanelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberPanelDelegate.h; sourceTree = "<group>"; };
 		84D78184268F9A150077E33E /* RSTask7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D78187268F9A150077E33E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D78188268F9A150077E33E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				849009E1268FAD9E00D1F847 /* MainView.h */,
+				84BBDEB42690ED7C0029E655 /* NumberPanelDelegate.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";

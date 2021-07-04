@@ -45,7 +45,7 @@
                         <constraint firstAttribute="height" constant="110" id="lHA-No-BdQ"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DV-NAi">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DV-NAi" customClass="AuthorizationButton">
                     <rect key="frame" x="109.5" y="361" width="156" height="42"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="156" id="Xjx-ey-Eea"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="t8p-ds-rLh" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="wlQ-A2-98a"/>
                 <constraint firstItem="lLV-XN-Mdq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="xzg-y9-d87"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="149"/>
+            <point key="canvasLocation" x="140" y="148.87556221889056"/>
         </view>
     </objects>
     <resources>

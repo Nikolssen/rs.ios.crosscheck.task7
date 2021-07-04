@@ -19,8 +19,8 @@
 
         UIWindow* window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         MainController* rootVC = [[MainController alloc] initWithNibName:@"MainController" bundle:nil];
-    MainPresenter* presenter = [[MainPresenter alloc] initWithView:rootVC];
-    rootVC.presenter = presenter;
+        MainPresenter* presenter = [[MainPresenter alloc] initWithView:rootVC];
+        rootVC.presenter = presenter;
         window.rootViewController = rootVC;
         self.window = window;
         [window makeKeyAndVisible];

@@ -18,6 +18,6 @@
     return [UIColor colorWithRed:194.0/255.0 green:1.0/255.0 blue:20.0/255.0 alpha:1.0];
 }
 +(instancetype) littleBoyBlue{
-    return [UIColor colorWithRed:128.0/255.0 green:164.0/255/0 blue:237.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:128.0/255.0 green:164.0/255.0 blue:237.0/255.0 alpha:1.0];
 }
 @end

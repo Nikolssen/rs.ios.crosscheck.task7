@@ -6,6 +6,7 @@
 //
 
 #import "NumberButton.h"
+#import "UIColor+TaskColors.h"
 @interface NumberButton()
 @property (nonatomic, strong) UIBezierPath* path;
 @end
@@ -15,27 +16,51 @@
     return [self.path containsPoint:point];
 }
 
--(void)setRadius:(CGFloat)radius{
-    _radius = radius;
-    CGRect frame = self.frame;
-    self.frame = CGRectMake(frame.origin.x, frame.origin.y, radius*2, radius*2);
-    _path = [UIBezierPath bezierPathWithOvalInRect:self.frame];
-   
-}
-
-
--(void)setColor:(UIColor *)color{
-    _color = color;
-    self.layer.borderColor = color.CGColor;
-    self.titleLabel.textColor = color;
-}
 
 - (void) awakeFromNib{
     [super awakeFromNib];
-    self.clipsToBounds = true;
+    [self configureUI];
     
 }
 
+- (void) configureUI{
+    self.titleLabel.font = [UIFont systemFontOfSize:24.0 weight:UIFontWeightSemibold];
+    self.clipsToBounds = true;
+    self.layer.borderWidth = 1.5;
+    self.layer.borderColor = [UIColor littleBoyBlue].CGColor;
+    [self setTitleColor:[UIColor littleBoyBlue] forState:UIControlStateNormal];
+    self.layer.cornerRadius = 25.0;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 50, 50);
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
+}
+
+-(instancetype) init{
+    self = [super init];
+    if (self){
+        [self configureUI];
+    }
+    return self;
+}
+- (void) setTitle:(NSString *)title forState:(UIControlState)state{
+    NSString* number = [title substringWithRange:NSMakeRange(0, 1)];
+    [super setTitle:number forState:state];
+}
+- (void)setHighlighted:(BOOL)highlighted{
+    [super setHighlighted: highlighted];
+    if (highlighted){
+        self.backgroundColor = [[UIColor littleBoyBlue] colorWithAlphaComponent: 0.2];
+        self.titleLabel.alpha = 1.0;
+    }
+    else
+    {
+        self.backgroundColor = [UIColor whiteColor];
+    }
+    
+}
 
 
 
