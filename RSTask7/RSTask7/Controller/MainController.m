@@ -46,12 +46,24 @@
 -(void)hide{
     [self.view endEditing:true];
 }
-- (void)invalidateLogin {
-    self.loginTextField.fieldState = TextFieldStateError;
+- (void)validateLogin:(BOOL) isValide; {
+    if (isValide) {
+        self.loginTextField.fieldState = TextFieldStateCorrect;
+    }
+    else {
+        self.loginTextField.fieldState = TextFieldStateError;
+    }
+    
 }
 
-- (void)invalidatePassword{
-    self.passwordTextField.fieldState = TextFieldStateError;
+- (void)validatePassword:(BOOL) isValide;{
+    if (isValide) {
+        self.passwordTextField.fieldState = TextFieldStateCorrect;
+    }
+    else {
+        self.passwordTextField.fieldState = TextFieldStateError;
+    }
+    
     }
 
 
