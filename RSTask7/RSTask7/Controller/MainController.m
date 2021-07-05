@@ -12,7 +12,7 @@
 #import "NumberButton.h"
 #import "NumberPanel.h"
 #import "AuthorizationButton.h"
-
+#import "NSCharacterSet+LatinLetters.h"
 @interface MainController () <UITextFieldDelegate, NumberPanelDelegate>
 @property (strong, nonatomic) IBOutlet TextField *loginTextField;
 @property (strong, nonatomic) IBOutlet TextField *passwordTextField;
@@ -97,6 +97,14 @@
     if (field.fieldState == TextFieldStateError){
         field.fieldState = TextFieldStateDefault;
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (textField == self.loginTextField){
+        NSCharacterSet* notLatinSet = [NSCharacterSet latinLettersCharacterSet].invertedSet;
+        return ([string rangeOfCharacterFromSet:notLatinSet].location == NSNotFound);
+    }
+    return true;
 }
 - (IBAction)authorize:(UIButton *)sender {
     NSString* login = self.loginTextField.text;
