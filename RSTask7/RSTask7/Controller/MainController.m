@@ -98,6 +98,7 @@
     }
 }
 - (IBAction)authorize:(UIButton *)sender {
+    [self.view endEditing:YES];
     NSString* login = self.loginTextField.text;
     NSString* password = self.passwordTextField.text;
     [self.presenter checkLogin:login AndPassword:password];
